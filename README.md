@@ -99,5 +99,4 @@ The release build uses Flutter's default debug signing config, which is fine for
 - Manage users (update password, reauthenticate): https://firebase.google.com/docs/auth/flutter/manage-users
 - Flutter form validation: https://docs.flutter.dev/cookbook/forms/validation
 
-## AI disclosure
-Claude (Anthropic), November 6, 2026, was used to help scaffold the code and README. All behavior was tested by the student on a device/emulator; see the evidence document for results.
+
