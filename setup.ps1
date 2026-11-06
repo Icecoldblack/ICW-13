@@ -30,6 +30,11 @@ Write-Host "5/6 Connecting to Firebase (choose your project, select android)..."
 if (-not (Get-Command firebase -ErrorAction SilentlyContinue)) { npm install -g firebase-tools }
 firebase login
 dart pub global activate flutterfire_cli
+# Add Pub cache bin to PATH so flutterfire is found
+$pubCache = "$env:LOCALAPPDATA\Pub\Cache\bin"
+if ($env:Path -notlike "*$pubCache*") {
+  $env:Path += ";$pubCache"
+}
 flutterfire configure --platforms=android
 
 Write-Host "6/6 Running tests and building the release APK..."
